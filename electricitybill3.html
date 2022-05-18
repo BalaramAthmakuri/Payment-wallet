@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VeloxPe | Electricity bill</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="body1">
+       
+
+<style>
+    .body1{
+      background-image: url('electricitybill.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+        
+        <div class="topnav">
+            <a class="active" href="main.html"><i style="color:#8a61b4;"><b style="font-size:35px">VeloxPe</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+        
+        <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="current_helpbox.html">Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="logout.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="formbox">
+          
+          <form name = "e3" class="triangle-border top" action="http://localhost/testsite/electricitybill4.html" >
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="fname">DUE AMOUNT: <?php 
+                $balelec = $_SESSION["billbal"];
+                echo $balelec;
+                ?>  <br>
+            BANK BALANCE: <?php
+            $ban = $_SESSION["currbalanceamt"];
+            echo $ban;
+        ?></label>
+            &nbsp;&nbsp;&nbsp;&nbsp;  <br><br>
+            &nbsp;&nbsp;
+            <br>
+            
+            <br>
+
+            <input type="submit" value="Pay" >
+           
+            
+
+            <br>
+            <br>
+          </form>
+        </div>
+    </body>
+</html>

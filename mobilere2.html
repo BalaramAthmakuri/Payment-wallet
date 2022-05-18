@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VeloxPe | Recharge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="mobile1">
+        <style>
+            .mobile1{
+        background-image: url('mobilerelogo.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+          </style>
+        <div class="topnav">
+            <a class="active" href="main.html"><i style="color:#e6e1eb;"><b style="font-size:35px">VeloxPe</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+        
+        <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="mobilehelpbox.html">Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="login.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="formbox">
+          
+          <form name = "m2" class="triangle-border top" action="http://localhost/testsite/mobile2.php" method="post">
+            <br>
+            <br>
+            <label for="fname">Balance : <?php  
+              
+              $conn = new mysqli('localhost','root','','userinfo');
+              $mypno=$_SESSION["mypno"];
+
+              $query = "SELECT BALANCE_AMOUNT FROM mobilerecharge WHERE PHONE_NUMBER = '$mypno' ";
+              $rs = $conn->query($query);
+              $resultAll = mysqli_query($conn, "SELECT * FROM mobilerecharge WHERE PHONE_NUMBER = '$mypno'");
+              if(!$resultAll)
+              {
+                  die(mysqli_error($conn));
+              }
+
+              if (mysqli_num_rows($resultAll) > 0) 
+              {
+                  while($rowData = mysqli_fetch_array($resultAll))
+                  {
+                      $rs =  $rowData["BALANCE_AMOUNT"];
+                  }
+                  echo $rs;
+              }
+              
+              
+              
+              
+              ?>      </label><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="fname">Recharge Amount :</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="fname" name="BALANCE" placeholder = "Ex: 50 100 25" ><br><br><br>
+            &nbsp;&nbsp;
+            <br>
+            
+            <input type="submit" value="Recharge">
+            <br>
+            
+
+            <br>
+            <br>
+          </form>
+        </div>
+    </body>
+</html>

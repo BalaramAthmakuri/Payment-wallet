@@ -1,0 +1,80 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border-spacing: 0 40px;
+  }
+  
+  th, td {
+	text-align: left;
+	padding: 8px;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  .gridview .selected, .gridview tbody .selected {
+    background-color: #816cb96b;
+    color: #fff;
+}
+.table-layout {
+    text-align: center;
+
+    font-family:"Trebuchet MS";
+    margin: 0 auto 0;
+}
+.table-layout td, .table-layout th {
+    padding: 5px 5px 0;
+}
+.table-layout td {
+    text-align: left;
+}
+.selected {
+    color: rgb(97, 46, 155);
+}
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: rgb(40, 40, 43);
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #826bbe;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(103, 60, 182);
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  

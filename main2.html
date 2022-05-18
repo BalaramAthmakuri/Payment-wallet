@@ -1,0 +1,127 @@
+<html>
+<head>
+	<title>Velox</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+</head>
+<body onload="setPrev_page();checkLogin(1);">
+	<div id="wrap">
+		<div id="top">
+			<div id="display_user" style="float:right;">
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+            <div class="topnav">
+                <a class="active" href="home.html"><i style="color:#9b56db;"><b style="font-size:35px">Veloxpe</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+            <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="help.html">Help  </a>
+            <a href="#"><?php
+              $rs =  $_SESSION["PHONE_NUMBER"];
+              echo $rs;
+              ?>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href ="logintry.html" > Sign out</a>
+                
+		</div>
+        <br>
+        <hr>
+       <h1 style="color:#270d3f;"> Welcome  <?php 
+        $name = $_SESSION["ACCOUNT_HOLDER_NAME"];
+        echo $name;
+         ?>!</h1>
+       
+       
+       <div class="sidebar">
+        <a class="active" href="main2.html">Home</a><br>
+        <a  href="transview.php">Transaction History </a>
+        <a href="#news">Veloxpe Stories</a>
+        <a href="qr.html">QR code</a>
+        
+        <a href="wallet1.php">Wallet</a>
+          
+          <div class="dropdown-content">
+            <a href="money.html">Add money to wallet</a>
+          </div>
+        </a>
+      </div>
+		<div>
+            <table style="background-color:#8f42d7;" class="table-layout">
+    <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th><a href="tocontact1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQON0xhUFvlP6eh_6VZrmQp2EAYpGHl_L9shSqk3QE4ppWizzKDD-9Pja9wsAS5aDfKkx4&usqp=CAU" class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="tobank1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01YkKMQ9rE5C4i-SUyAIYsX-Jya-0Cds-PQ&usqp=CAU" class="mobilelogo" width="100",height="90"></a></th>
+                
+                <th><a href="pinchecker.html"><img src="https://i.pinimg.com/736x/2e/12/ea/2e12eaea373584fa048dceca2d5b2648.jpg" class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="checkbalance.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01YkKMQ9rE5C4i-SUyAIYsX-Jya-0Cds-PQ&usqp=CAU" class="mobilelogo" width="100",height="90"></a></th>
+              </tr>
+              <tr style="background-color:#8f42d7;">
+                <td ></td>
+                
+                <td>To phone number</td>
+                <td>To bank account</td>
+                <td>PIN Checker</td>
+                <td>check balance</td>
+
+              </tr>
+              <tr >
+                <tr style="background-color:#8f42d7;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                  </table>
+                  <br><br>
+                    <table style="background-color:hsl(271, 37%, 59%);";" class="table-layout">
+              <tr style="background-color:#9870bd;">
+                <th></th>
+                <th><a href="mobilere.html"><img src="https://www.kindpng.com/picc/m/33-338552_wallet-vector-mobile-recharge-mobile-recharge-logo-png.png" class="mobilelogo" width="100",height="90",style="boder-radius:30%"></a></th>
+                <th><a href="gasbill.html"><img src="https://cdn.iconscout.com/icon/free/png-256/gas-cylinder-1817228-1538098.png" class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="electricitybill.html"><img src="https://banner2.cleanpng.com/20180330/rve/kisspng-electricity-computer-icons-symbol-company-electric-electric-5abdc00c68c5a8.0630823215223849084292.jpg"class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="creditcards.html"><img src="https://previews.123rf.com/images/subjob/subjob1711/subjob171100062/90140299-grafische-kreditkarte-der-ikone-geld-bank-schwarzweiss-piktogramm-f%C3%BCr-webdesign-vektor-flache-abbild.jpg" class="mobilelogo" width="100",height="90"></a></th>               
+              </tr>
+              <tr style="background-color:#9870bd;">
+                <td>Recharge mobile</td>
+                <td>Recharge mobile</td>
+                <td>Gas booking</td>
+                <td>Electricity</td>
+                <td>Debit card</td>
+              </tr>
+            </table>
+            <br style="background-color:#9870bd;">
+            <table  style="background-color:#982aff;";" class="table-layout">
+              <tr style="background-color:#982aff;">
+                <th><img src="" width="100",height="90"></th>
+
+                <th><a href="dth.html"><img src="https://www.talkingcrooks.co.in/assets/front/img/team/1643879950946554096.png" class="mobilelogo" width="100",height="90"></a></th>
+
+
+                
+                <th><a href="https://www.paytmmoney.com/"><img src="https://cdn4.vectorstock.com/i/1000x1000/97/03/investments-money-icon-vector-21559703.jpg" class="mobilelogo" width="100",height="90"></a> </th>
+                <th><a href="LIC.html"><img src="https://play-lh.googleusercontent.com/m8B9n5iX1503U_KfAceC6scRMmkDUMML8KjSFa7WjvHUfGfjf-yrGiLXKCRBoYXZe88=s180-rw" class="mobilelogo" width="100",height="90"></a> </th>
+                
+                <th><a href="LIC.html"><img src="https://media.istockphoto.com/vectors/insurance-and-security-logo-design-vector-id1250223029?k=20&m=1250223029&s=612x612&w=0&h=DgyNWVcPw5H7kQ040e39qHvi3SI0OJEWSWyScyePEd0=" class="mobilelogo" width="100",height="90"></a> </th>
+                </tr>
+              <tr style="background-color:#982aff;">
+                <td></td>
+                <td>Recharge DTH</td>
+                <td>Investments</td>
+                <td>Lic payment</td>
+                <td>Insurance</td>
+              </tr>
+            </table>
+          </div>
+            </table>
+          </div>
+          
+          <body>
+
+<html>

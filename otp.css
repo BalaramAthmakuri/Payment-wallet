@@ -1,0 +1,27 @@
+#otpdiv{
+
+    display: none;
+}
+
+#verifyotp{
+
+    display: none;
+}
+#resend_otp{
+    display: none;
+}
+
+.countdown{
+    display: table;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+
+}
+
+#resend_otp:hover{
+
+    text-decoration:underline;
+    
+
+}

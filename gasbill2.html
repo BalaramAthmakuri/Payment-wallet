@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VeloxPe | Recharge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="body2">
+        <style>
+            .body2{
+  background-image: url('gassbill.png');
+  background-repeat: no-repeat;
+  background-position-y: 4cm;
+}
+        </style>
+        
+        <div class="topnav">
+            <a class="active" href="main.html"><i style="color:#ae7ae2;"><b style="font-size:35px">VeloxPe</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+        
+        <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="gasshelpbox.html">Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="login.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="formbox1">
+          
+          <form name = "g2" class="triangle-border top" action="gasbill3.html" method="post">
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="fname">Mobile number:    <?php  
+              
+              $conn = new mysqli('localhost','root','','userinfo');
+              $res = $_SESSION["phno"];
+              echo $res;
+
+              
+              
+              
+              
+              ?>          
+
+
+
+
+
+
+
+
+            </label>
+            &nbsp;&nbsp;
+            <br><br>
+            <label for="job">Name:    <?php  
+              
+              $conn = new mysqli('localhost','root','','userinfo');
+              $myno=$_SESSION["phno"];
+
+              $query = "SELECT ACCOUNT_HOLDER_NAME FROM bankbalance WHERE PHONE_NUMBER = '$myno' ";
+              $rs = $conn->query($query);
+              $resultAll = mysqli_query($conn, "SELECT * FROM bankbalance WHERE PHONE_NUMBER = '$myno'");
+              if(!$resultAll)
+              {
+                  die(mysqli_error($conn));
+              }
+
+              if (mysqli_num_rows($resultAll) > 0) 
+              {
+                  while($rowData = mysqli_fetch_array($resultAll))
+                  {
+                      $rs =  $rowData["ACCOUNT_HOLDER_NAME"];
+                  }
+                  echo $rs;
+              }
+              
+              
+              
+              
+              ?>  
+              
+            
+            
+            
+            
+            
+            
+            
+            </label><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="fname">Gas provider: <?php
+              
+              echo $_SESSION["gasname"];
+
+              ?>
+
+
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+            <label for="fname">Amount to be paid : <?php
+              $g1 = $_SESSION["gascost"];
+              echo $_SESSION["gascost"];
+              $_SESSION["g1"] = $g1;
+
+              ?>
+
+
+
+
+
+            </label><br><br>
+            
+            <input type="submit" value="Pay">
+            <br>
+            
+
+            <br>
+            <br>
+          </form>
+        </div>
+    </body>
+</html>

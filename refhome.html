@@ -1,0 +1,118 @@
+<html>
+<head>
+	<title>Velox</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+</head>
+<body onload="setPrev_page();checkLogin(1);">
+	<div id="wrap">
+		<div id="top">
+			<div id="display_user" style="float:right;">
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+            <div class="topnav">
+                <a class="active" href="home.html"><i style="color:#9b56db;"><b style="font-size:35px">Veloxpe</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+            <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="help.html">Help  </a>
+            <a href="#"><?php
+              print_r($_SESSION["PHONE_NUMBER"]);
+              ?>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href ="login.html" > Sign out</a>
+                
+		</div>
+        <br>
+        <hr>
+       <h1 style="color:#270d3f;"> welcome_user!!</h1>
+      
+        
+       <div class="sidebar">
+        <a class="active" href="main2.html">Home</a><br>
+        <a  href="transview.php">Transaction History </a>
+        <a href="#news">Veloxpe Stories</a>
+        <a href="addbank.html">Add bank account</a>
+        <a href="remove.html">Romove account</a>
+        <a href="qr.html">QR code</a>
+        <a href="#about">Rewards</a>
+        <a href="wallet.html">Wallet
+          <div class="dropdown-content">
+            <a href="money.html">Add money to wallet</a>
+          </div>
+        </a>
+      </div>
+		<div>
+            <table style="background-color:#8f42d7;" class="table-layout">
+    <tr>
+                <th><img src="http://simpleicon.com/wp-content/uploads/cell_phone_2.png" class="mobilelogo" width="100",height="90"></th>
+                <th><a href="tocontact1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQON0xhUFvlP6eh_6VZrmQp2EAYpGHl_L9shSqk3QE4ppWizzKDD-9Pja9wsAS5aDfKkx4&usqp=CAU" class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="tobank1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01YkKMQ9rE5C4i-SUyAIYsX-Jya-0Cds-PQ&usqp=CAU" class="mobilelogo" width="100",height="90"></a></th>
+                <th><img src="https://logodix.com/logo/1763558.jpg" class="mobilelogo" width="100",height="90"></th>
+                
+                <th><img src="https://cdn0.iconfinder.com/data/icons/banking-and-finance-45/256/68-512.png" class="mobilelogo" width="100",height="90"></th>
+                <th><img src="https://previews.123rf.com/images/supirloko89/supirloko892002/supirloko89200200009/139452305-bank-account-simple-icon-in-black-and-white-.jpg" class="mobilelogo" width="100",height="90"></th>
+              </tr>
+              <tr style="background-color:#8f42d7;">
+                <td ></td>
+                
+                <td>To phone number</td>
+                <td>To bank account</td>
+                <td>To UPI account</td>
+                <td>Self Transfer</td>
+                <td>check balance</td>
+
+              </tr>
+              <tr >
+                <tr style="background-color:#8f42d7;">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                  </table>
+                  <br><br>
+                    <table style="background-color:hsl(271, 37%, 59%);";" class="table-layout">
+              <tr style="background-color:#9870bd;">
+                <th></th>
+                <th><a href="mobilere.html"><img src="https://www.kindpng.com/picc/m/33-338552_wallet-vector-mobile-recharge-mobile-recharge-logo-png.png" class="mobilelogo" width="100",height="90",style="boder-radius:30%"></a></th>
+                <th><a href="gasbill.html"><img src="https://cdn.iconscout.com/icon/free/png-256/gas-cylinder-1817228-1538098.png" class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="electricitybill.html"><img src="https://banner2.cleanpng.com/20180330/rve/kisspng-electricity-computer-icons-symbol-company-electric-electric-5abdc00c68c5a8.0630823215223849084292.jpg"class="mobilelogo" width="100",height="90"></a></th>
+                <th><a href="creditcards.html"><img src="https://previews.123rf.com/images/subjob/subjob1711/subjob171100062/90140299-grafische-kreditkarte-der-ikone-geld-bank-schwarzweiss-piktogramm-f%C3%BCr-webdesign-vektor-flache-abbild.jpg" class="mobilelogo" width="100",height="90"></a></th>               
+              </tr>
+              <tr style="background-color:#9870bd;">
+                <td>Recharge mobile</td>
+                <td>Recharge mobile</td>
+                <td>Gas booking</td>
+                <td>Electricity</td>
+                <td>Credit card</td>
+              </tr>
+            </table>
+            <br style="background-color:#9870bd;"><br>
+            <table  style="background-color:#982aff;";" class="table-layout">
+              <tr style="background-color:#982aff;">
+                <th><img src="" width="100",height="90"></th>
+                <th><img src="https://www.talkingcrooks.co.in/assets/front/img/team/1643879950946554096.png" class="mobilelogo" width="100",height="90"></th>
+                <th><img src="https://cdn4.vectorstock.com/i/1000x1000/97/03/investments-money-icon-vector-21559703.jpg" class="mobilelogo" width="100",height="90"></th>
+                <th><img src="data:image/jpeg;base64,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" class="mobilelogo" width="100",height="90"></th>
+                <th><img src="https://media.istockphoto.com/vectors/insurance-and-security-logo-design-vector-id1250223029?k=20&m=1250223029&s=612x612&w=0&h=DgyNWVcPw5H7kQ040e39qHvi3SI0OJEWSWyScyePEd0=" class="mobilelogo" width="100",height="90"></th>
+                </tr>
+              <tr style="background-color:#982aff;">
+                <td></td>
+                <td>Recharge DTH</td>
+                <td>Investments</td>
+                <td>Lic payment</td>
+                <td>Insurance/td>
+              </tr>
+            </table>
+          </div>
+            </table>
+          </div>
+          

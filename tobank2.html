@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VeloxPe | Recharge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="mobile1">
+        <style>
+            .mobile1{
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Second_Bank_of_the_United_States%2C_Philadelphia.jpg/1200px-Second_Bank_of_the_United_States%2C_Philadelphia.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+          </style>
+        <div class="topnav">
+            <a class="active" href="main.html"><i style="color:#d0b2ee;"><b style="font-size:35px">VeloxPe</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+        
+        <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="mobilehelpbox.html">Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="login.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="formbox">
+          
+          <form name = "m2" class="triangle-border top" action="http://localhost/testsite/tobank1.php" method="post">
+            <br>
+            <br>
+            <label for="fname">Your account Balance : <?php  
+              session_start();
+              $conn = new mysqli('localhost','root','','userinfo');
+              $myno=$_SESSION["myno"];
+
+              $query = "SELECT BALANCE FROM bankbalance WHERE PHONE_NUMBER = '$myno' ";
+              $rs = $conn->query($query);
+              $resultAll = mysqli_query($conn, "SELECT * FROM bankbalance WHERE PHONE_NUMBER = '$myno'");
+              if(!$resultAll)
+              {
+                  die(mysqli_error($conn));
+              }
+
+              if (mysqli_num_rows($resultAll) > 0) 
+              {
+                  while($rowData = mysqli_fetch_array($resultAll))
+                  {
+                      $rs =  $rowData["BALANCE"];
+                  }
+                  echo $rs;
+              }
+              
+              
+              
+              
+              ?>      </label><br><br><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<label for="fname">PIN : </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="fname" name="pin" placeholder = "Enter your 4 digit pin" minlength="4" maxlength="4" ><br><br><br>
+            &nbsp;&nbsp;
+            <br>
+            
+            <input type="submit" value="Pay">
+            <br>
+            
+
+            <br>
+            <br>
+          </form>
+        </div>
+    </body>
+</html>

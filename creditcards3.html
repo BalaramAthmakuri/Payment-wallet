@@ -1,0 +1,221 @@
+<html>
+<head>
+	<title>Velox</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/cookies.js"></script>
+</head>
+<body onload="setPrev_page();checkLogin(1);">
+	<div id="wrap">
+		<div id="top">
+			<div id="display_user" style="float:right;">
+				<p id="welcome_user" style="margin-top:85px;margin-right:50px;"></p>
+			</div>
+            <div class="topnav">
+                <a class="active" href="home.html"><i style="color:#9b56db;"><b style="font-size:35px">Veloxpe</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+            <a href="refhome.html">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="help.html">Help  </a>
+            <a href="#"><?php
+              $a = $_SESSION["PHONE_NUMBER"];
+              echo $a;
+              ?>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <a href ="login.html" > Sign out</a>
+                
+		    </div>
+        </div>
+        <br>
+        <hr>
+       <h1 style="color:#270d3f;"> welcome_user!!</h1>
+       
+    
+    
+    
+    
+        <?php   
+        
+        $conn = new mysqli('localhost','root','','userinfo');
+       
+        $self=$_SESSION["PHONE_NUMBER"];
+        
+          
+      
+      
+      
+          
+      
+      
+      
+      
+                if($conn->connect_error){
+                  echo "$conn->connect_error";
+                  die("Connection Failed : ". $conn->connect_error);
+                }else{
+                  $query = "SELECT BALANCE FROM bankbalance WHERE PHONE_NUMBER = '$self' ";
+                  $rs = $conn->query($query);
+                  $resultAll = mysqli_query($conn, "SELECT * FROM bankbalance WHERE PHONE_NUMBER = '$self'");
+                  if(!$resultAll)
+                  {
+                      die(mysqli_error($conn));
+                  }
+              
+                  if (mysqli_num_rows($resultAll) > 0) 
+                  {
+                      while($rowData = mysqli_fetch_array($resultAll))
+                      {
+                          $rs1 =  $rowData["BALANCE"];
+                      }
+                  }
+                  $_SESSION["currbalanceamt"] = $rs1;
+                  
+                 
+                
+                
+      
+              }
+      
+      
+      
+              
+                  
+              $conn->close();
+          
+              
+              
+              ?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+       <?php 
+        $_SESSION["balc"] = $_SESSION["currbalanceamt"]; 
+        ?>
+       
+		</div>
+            
+        </body>
+
+        <center><i><b>Succesfully recharged your phone </b></i></center>
+    <center><i><b>your current bank balance is : <?php   
+        
+        
+  $conn = new mysqli('localhost','root','','userinfo');
+  
+  $self=$_SESSION["PHONE_NUMBER"];
+  
+    
+
+
+
+    
+
+
+
+
+          if($conn->connect_error){
+            echo "$conn->connect_error";
+            die("Connection Failed : ". $conn->connect_error);
+          }else{
+            $query = "SELECT BALANCE FROM bankbalance WHERE PHONE_NUMBER = '$self' ";
+            $rs = $conn->query($query);
+            $resultAll = mysqli_query($conn, "SELECT * FROM bankbalance WHERE PHONE_NUMBER = '$self'");
+            if(!$resultAll)
+            {
+                die(mysqli_error($conn));
+            }
+        
+            if (mysqli_num_rows($resultAll) > 0) 
+            {
+                while($rowData = mysqli_fetch_array($resultAll))
+                {
+                    $rs1 =  $rowData["BALANCE"];
+                }
+            }
+            $_SESSION["currbalanceamt"] = $rs1;
+            echo $rs1;
+           
+          
+          
+
+        }
+
+
+
+        
+        	
+		$conn->close();
+	
+        
+        
+        ?> </b></i></center>
+        <center><b><i>Your creditcard  balance is :
+
+            <?php   
+        
+            
+      $conn = new mysqli('localhost','root','','userinfo');
+      
+      $self=$_SESSION["mycard"];
+      
+        
+    
+    
+    
+        
+    
+    
+    
+    
+              if($conn->connect_error){
+                echo "$conn->connect_error";
+                die("Connection Failed : ". $conn->connect_error);
+              }else{
+                $query = "SELECT AMOUNT FROM creditcards WHERE CARD_NUMBER = '$self' ";
+                $rs2 = $conn->query($query);
+                $resultAll = mysqli_query($conn, "SELECT * FROM creditcards WHERE CARD_NUMBER = '$self'");
+                if(!$resultAll)
+                {
+                    die(mysqli_error($conn));
+                }
+            
+                if (mysqli_num_rows($resultAll) > 0) 
+                {
+                    while($rowData = mysqli_fetch_array($resultAll))
+                    {
+                        $rs3 =  $rowData["AMOUNT"];
+                    }
+                }
+                echo $rs3;
+               
+              
+              
+    
+            }
+    
+    
+    
+            
+                
+            
+        
+            
+            
+            ?>
+        </i></b></center>
+
+
+        
+</html>
+          

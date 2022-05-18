@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>VeloxPe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+	<style> 
+        input[type=text] {
+          width: 100%;
+          padding: 7px ;
+          margin: 5px 0;
+          border: 1px solid #000000;
+          }
+        input[type=submit] {
+          width: 50%;
+          padding: 9px;
+          margin: 5px 0;
+          
+          border: 2px solid #000000;
+          outline: none;
+           background-color:green;
+           color:white;
+            
+        }
+        .body{
+          background-color: rgb(229, 240, 240);
+        }
+          .formbox{
+          display:flex;
+          justify-content: center;
+        }
+
+        
+            </style>
+            <body class="body">
+              <div class="topnav">
+                <a class="active" href="home.html"><i style="color:#9b56db;"><b style="font-size:35px">VeloxPe</b>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a>
+            <a href="about.html">About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="contactus.html">Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="helpbox.html">Help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a href="logout.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <div class="login-container">
+              
+            </div>
+          </div>
+
+            
+            <center><p><h2><i style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">USER REGISTRATION</i></h2></p></center><br>
+    <form action="http://localhost/testsite/index1.php" method="post" name="form1" class="formbox">
+      
+   <table width="25%" border="0" cellpadding = 10>
+     
+    <tbody><tr> 
+   <td><h3>NAME</h3></td>
+   <td><input type="text" name="NAME" required></td>
+   </tr>
+   <tr> 
+   <td><h3>PHONE_NUMBER</h3></td>
+   <td><input type="text" name="PHONE_NUMBER" required></td>
+   </tr>
+   <tr> 
+    <td><h3>PASSWORD</h1></td>
+    <td><input type="password" name="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required minlength="8"></td>
+    </tr>
+    <tr> 
+        <td><h3>MAIL</h3></td>
+        <td><input type="email" name="MAIL" required></td>
+        </tr>
+        <tr> 
+            <td><h3>DOB</h3></td>
+            <td><input type="date" name="DOB" required></td>
+            </tr>
+    <tr> 
+    <td><h3>Your time of birth</h3></td>
+    <td><input type="text" name="Q1_Your_time_of_birth" required></td>
+        </tr>
+        <tr> 
+            <td><h3>What primary school did you attend</h3></td>
+            <td><input type="text" name="Q2_What_primary_school_did_you_attend" required></td>
+            </tr>
+            <tr>
+            <td><h3>What was the street name you lived in as a child</h3></td>
+            <td><input type="text" name="Q3_What_was_the_street_name_you_lived_in_as_a_child" required></td>
+            </tr>
+  
+   <td><input type="submit" name="Submit" value="Register"></td>
+   </tr>
+               
+           </tbody></table>
+           
+       </form>
+
+      </body>
+   
+</html>

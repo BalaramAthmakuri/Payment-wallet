@@ -1,0 +1,110 @@
+<html>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <center><i><b>Succesfully recharged your phone </b></i></center>
+    <center><i><b>your current bank balance is : <?php   
+        
+        
+  $conn = new mysqli('localhost','root','','userinfo');
+  $mypno=$_SESSION["mypno"];
+  $self=$_SESSION["PHONE_NUMBER"];
+  
+    
+
+
+
+    
+
+
+
+
+          if($conn->connect_error){
+            echo "$conn->connect_error";
+            die("Connection Failed : ". $conn->connect_error);
+          }else{
+            $query = "SELECT BALANCE FROM bankbalance WHERE PHONE_NUMBER = '$self' ";
+            $rs = $conn->query($query);
+            $resultAll = mysqli_query($conn, "SELECT * FROM bankbalance WHERE PHONE_NUMBER = '$self'");
+            if(!$resultAll)
+            {
+                die(mysqli_error($conn));
+            }
+        
+            if (mysqli_num_rows($resultAll) > 0) 
+            {
+                while($rowData = mysqli_fetch_array($resultAll))
+                {
+                    $rs1 =  $rowData["BALANCE"];
+                }
+            }
+            echo $rs1;
+           
+          
+          
+
+        }
+
+
+
+        
+        	
+		$conn->close();
+	
+        
+        
+        ?> </b></i></center>
+        <center><b><i>Your mobile account balance is :
+
+            <?php   
+        
+            
+      $conn = new mysqli('localhost','root','','userinfo');
+      $mypno=$_SESSION["mypno"];
+      $self=$_SESSION["PHONE_NUMBER"];
+      
+        
+    
+    
+    
+        
+    
+    
+    
+    
+              if($conn->connect_error){
+                echo "$conn->connect_error";
+                die("Connection Failed : ". $conn->connect_error);
+              }else{
+                $query = "SELECT BALANCE_AMOUNT FROM mobilerecharge WHERE PHONE_NUMBER = '$mypno' ";
+                $rs2 = $conn->query($query);
+                $resultAll = mysqli_query($conn, "SELECT * FROM mobilerecharge WHERE PHONE_NUMBER = '$mypno'");
+                if(!$resultAll)
+                {
+                    die(mysqli_error($conn));
+                }
+            
+                if (mysqli_num_rows($resultAll) > 0) 
+                {
+                    while($rowData = mysqli_fetch_array($resultAll))
+                    {
+                        $rs3 =  $rowData["BALANCE_AMOUNT"];
+                    }
+                }
+                echo $rs3;
+               
+              
+              
+    
+            }
+    
+    
+    
+            
+                
+            
+        
+            
+            
+            ?>
+        </i></b></center>
+    
+</html>
