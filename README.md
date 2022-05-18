@@ -1,2 +1,2 @@
 # Payment-wallet
-It's a simple payment wallet
+Simple payment wallet with numorous functionalities
